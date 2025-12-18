@@ -1,0 +1,285 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    animation: fadeInPage 1.5s;
+}
+
+@keyframes fadeInPage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: #fff;
+}
+
+
+header {
+    text-align: center;
+    padding: 60px;
+    background: linear-gradient(135deg, #000, #222);
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+.title {
+    font-size: 45px;
+    letter-spacing: 2px;
+    animation: fadeIn 1.5s;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #999;
+    animation: fadeIn 2s;
+}
+
+/* NAVIGATION */
+nav {
+    text-align: center;
+    padding: 15px;
+    background: #111;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ffea;
+    text-shadow: 0 0 10px #00ffeab2;
+}
+
+/* SECTIONS */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #000;
+    animation: fadeSlide 1s;
+}
+
+.project-card {
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 4px solid #00ffea;
+    background: #2b2b2b;
+    border-radius: 6px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    border-top: 1px solid #333;
+    margin-top: 50px;
+}
+
+/* EFFECTS */
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeSlide {
+    0% {opacity: 0; transform: translateY(20px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-top: 20px;
+    border: 3px solid #00ffee;
+    box-shadow: 0 0 15px #00ffee55;
+    transition: 0.3s;
+}
+
+.profile-img:hover {
+    box-shadow: 0 0 25px #00ffee;
+    transform: scale(1.03);
+}
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 40px 10px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    section {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px 10px;
+        font-size: 16px;
+    }
+
+    ul li {
+        font-size: 15px;
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 26px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .profile-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin: 5px 8px;
+    }
+}
+.resume-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #00ffea;
+    color: #000;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 15px #00ffee55;
+}
+
+.resume-btn:hover {
+    background: #00ffee;
+    box-shadow: 0 0 25px #00ffee;
+    transform: scale(1.05);
+}
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    background: #00ffea;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #00ffee44;
+}
+
+.social-btn:hover {
+    box-shadow: 0 0 18px #00ffee;
+    transform: scale(1.08);
+}
+
+.github {
+    background: #222;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.linkedin {
+    background: #0077b5;
+    color: #fff;
+}
+.contact-form {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form button {
+    background: #00ffea;
+    color: #000;
+    padding: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #00ffee;
+    box-shadow: 0 0 20px #00ffee;
+    transform: scale(1.05);
+}
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.project-card:hover {
+    box-shadow: 0 0 20px #00ffee77;
+    transform: scale(1.02);
+    transition: 0.3s;
+}
